@@ -13,3 +13,8 @@
 3. 3차수정
 - 2022.6.26 : 데이터 현행화에 따른 소스코드 변경
 - 변경소스 프로젝트 textbook2.zip
+
+4. MASS 라이브러리 업데이트로 인한 dplyr 라이브러리의 select()함수 충돌문제
+- 이유: MASS 라이브러리에 select()함수와 dplyr 라이브러리의 select()함수가 이름이 같아서 사용시 충돌 발생
+- 해결방법 : 10장에서 MASS 라이브러리 사용후 dplyr 라이브러리의 select()함수 사용전에 다음 명령어를 사용해서 MASS 라이브러리 unload
+             detach("package:MASS", unload = TRUE)
